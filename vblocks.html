@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>VBlocks — Règles de confidentialité</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <style>
+    :root {
+      --bg1:#2b5876; --bg2:#4e4376; --card:#ffffff; --ink:#1b1f24; --muted:#5b6470; --brand:#6ea8fe;
+    }
+    html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);}
+    body{
+      background: linear-gradient(135deg,var(--bg1),var(--bg2));
+      min-height:100vh; display:flex; align-items:center; justify-content:center; padding:24px;
+    }
+    .wrap{
+      width:100%; max-width:900px; background:var(--card); border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,.18);
+      padding:28px;
+    }
+    h1{margin:0 0 8px 0; font-size:28px}
+    .subtitle{color:var(--muted); margin:0 0 16px 0}
+    h2{margin:28px 0 10px 0; font-size:20px}
+    p,li{line-height:1.55}
+    .card{
+      background:#f6f8fb; border:1px solid #e6e9ef; border-radius:12px; padding:16px; margin:14px 0;
+    }
+    .grid{display:grid; grid-template-columns: 1fr 1fr; gap:16px}
+    @media (max-width: 720px){ .grid{grid-template-columns:1fr} }
+    .switch {
+      display:flex; align-items:center; gap:12px; padding:14px 16px; border:1px solid #e6e9ef; border-radius:12px; background:#fff;
+    }
+    .toggle {
+      width:48px; height:28px; background:#e3e8ef; border-radius:999px; position:relative; cursor:pointer; transition:.2s all;
+    }
+    .toggle::after{
+      content:""; position:absolute; top:3px; left:3px; width:22px; height:22px; background:#fff; border-radius:50%;
+      box-shadow:0 2px 6px rgba(0,0,0,.15); transition:.2s all;
+    }
+    .toggle.on{ background: #25c2a0; }
+    .toggle.on::after{ left:23px; }
+    .pill{display:inline-block; padding:4px 10px; font-size:12px; border-radius:999px; background:#eef4ff; color:#2856d1}
+    a{color:var(--brand); text-decoration:none}
+    .footer{color:#6b7280; font-size:13px; margin-top:18px}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>VBlocks — Règles de confidentialité</h1>
+      <p class="subtitle">Dernière mise à jour : 15/08/2025 — Éditeur : <strong>Vboldstudio</strong></p>
+    </header>
+
+    <section class="card">
+      <p>Cette page explique comment <strong>VBlocks</strong> utilise les données, notamment via la régie publicitaire <strong>Lovapp</strong>. Vous pouvez à tout moment <strong>refuser la personnalisation des publicités</strong> dans les <a href="#parametres">Paramètres</a> ci-dessous. En cas de refus, vous continuerez à voir des annonces <strong>contextuelles / non personnalisées</strong>.</p>
+    </section>
+
+    <div class="grid">
+      <section>
+        <h2>1) Quelles données ?</h2>
+        <ul>
+          <li>Identifiants publicitaires (ex. ID publicitaire de l’appareil).</li>
+          <li>Données techniques (modèle, langue, version de l’app, logs d’événements).</li>
+          <li>Approximation géographique (pays/région), pour la conformité et le plafonnement de la fraude.</li>
+          <li>Consentements et préférences publicitaires (votre choix ci-dessous).</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>2) Pourquoi ?</h2>
+        <ul>
+          <li>Afficher et mesurer la performance des publicités.</li>
+          <li>Lutter contre la fraude, améliorer la sécurité et la qualité du service.</li>
+          <li>En cas d’accord, personnaliser l’affichage des annonces.</li>
+        </ul>
+      </section>
+    </div>
+
+    <section>
+      <h2>3) Base légale</h2>
+      <p>En Europe (RGPD), la personnalisation publicitaire repose sur votre <strong>consentement</strong>. Sans consentement, VBlocks et ses partenaires (dont Lovapp) diffuseront des annonces <strong>non personnalisées</strong> (base légale : intérêt légitime pour la sécurité/mesure stricte, lorsque applicable).</p>
+    </section>
+
+    <section>
+      <h2>4) Partage</h2>
+      <p>Nous pouvons transmettre certaines données à des partenaires techniques strictement nécessaires à l’affichage d’annonces (par ex. Lovapp) ou à la mesure/anti-fraude. Ces partenaires traitent vos données selon leurs propres politiques de confidentialité et exigences légales.</p>
+    </section>
+
+    <section id="parametres" class="card">
+      <h2>5) Paramètres — consentement & refus</h2>
+      <p>Vous pouvez activer/désactiver la <strong>personnalisation des publicités</strong> ci-dessous. Votre choix s’applique dans VBlocks et sera conservé localement sur cet appareil. En cas de désactivation, vous verrez des publicités non personnalisées.</p>
+
+      <div class="switch" role="group" aria-label="Préférences publicitaires">
+        <div id="adsToggle" class="toggle" role="switch" aria-checked="false" tabindex="0"></div>
+        <div>
+          <div><strong id="adsLabel">Publicités personnalisées : désactivées</strong></div>
+          <div class="footer">Ce réglage est stocké en local (aucun compte requis). <span class="pill">Modifiable à tout moment</span></div>
+        </div>
+      </div>
+
+      <p style="margin-top:12px">Vous pouvez également réinitialiser l’ID publicitaire de l’appareil dans les réglages du système (Android : <em>Paramètres &gt; Google &gt; Annonces</em> ou <em>Services Google &gt; Annonces</em>).</p>
+    </section>
+
+    <section>
+      <h2>6) Durées de conservation</h2>
+      <p>Les données sont conservées le temps nécessaire aux finalités décrites (affichage/mesure des annonces, anti-fraude) et conformément aux obligations légales des partenaires.</p>
+    </section>
+
+    <section>
+      <h2>7) Vos droits</h2>
+      <p>Selon votre région, vous pouvez demander l’accès, la rectification, la suppression, la limitation ou l’opposition au traitement. Pour exercer ces droits, contactez-nous : <a href="mailto:privacy@vboldstudio.com">privacy@vboldstudio.com</a>. Pour les paramètres d’annonces, utilisez d’abord l’interrupteur ci-dessus.</p>
+    </section>
+
+    <section>
+      <h2>8) Sécurité</h2>
+      <p>Nous appliquons des mesures techniques et organisationnelles raisonnables afin de protéger vos données. Aucune méthode n’offre une sécurité absolue, mais nous nous efforçons de réduire les risques.</p>
+    </section>
+
+    <section>
+      <h2>9) Enfants</h2>
+      <p>VBlocks ne cible pas spécifiquement les enfants. Si vous pensez qu’un mineur nous a fourni des données, contactez-nous pour suppression.</p>
+    </section>
+
+    <section>
+      <h2>10) Mises à jour</h2>
+      <p>Cette politique peut évoluer. En cas de changement important, nous mettrons à jour la date ci-dessus et/ou afficherons un avis dans l’app.</p>
+    </section>
+
+    <footer class="footer">
+      © <span id="year"></span> Vboldstudio — Contact : <a href="mailto:privacy@vboldstudio.com">privacy@vboldstudio.com</a>
+    </footer>
+  </main>
+
+  <script>
+    // === Simple gestion locale du consentement ===
+    // Clé locale que ton app/SDK peut lire pour configurer Lovapp
+    const KEY = "adsPersonalized"; // "true" | "false"
+    const toggle = document.getElementById('adsToggle');
+    const label  = document.getElementById('adsLabel');
+    const yearEl = document.getElementById('year');
+    yearEl.textContent = new Date().getFullYear();
+
+    function readPref(){
+      const v = localStorage.getItem(KEY);
+      if (v === null) return false; // défaut : désactivé = non personnalisé
+      return v === "true";
+    }
+    function writePref(val){
+      localStorage.setItem(KEY, val ? "true" : "false");
+      // 👉 Ici, dans l’app réelle, appelle l’API du SDK Lovapp pour appliquer le choix
+      // Exemple PSEUDO:
+      // if (val) { Lovapp.enablePersonalizedAds(); } else { Lovapp.disablePersonalizedAds(); }
+    }
+    function render(){
+      const on = readPref();
+      toggle.classList.toggle('on', on);
+      toggle.setAttribute('aria-checked', on ? 'true' : 'false');
+      label.textContent = "Publicités personnalisées : " + (on ? "activées" : "désactivées");
+    }
+    function togglePref(){
+      const current = readPref();
+      writePref(!current);
+      render();
+    }
+
+    // Init
+    if (localStorage.getItem(KEY) === null) {
+      // Défaut : désactivé (non personnalisées) si aucun choix
+      writePref(false);
+    }
+    render();
+
+    // Interactions
+    toggle.addEventListener('click', togglePref);
+    toggle.addEventListener('keydown', (e)=>{ if(e.key === 'Enter' || e.key === ' ') { e.preventDefault(); togglePref(); } });
+  </script>
+</body>
+</html>
