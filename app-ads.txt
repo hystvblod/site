@@ -2,6 +2,8 @@ google.com, pub-6837328794080297, DIRECT, f08c47fec0942fa0
 unityads.unity3d.com, 20067493089374, DIRECT, 9a602e19d78b193a
 vungle.com, 68baa02f73b0b94e3242ec4c, DIRECT, c552e6c4f3d63e0e
 
+facebook.com, 801537016378071, RESELLER, c3e20eee3f780d68
+
 33across.com, 0010b00002MptSLAAZ, RESELLER, bbea06d9c4d2853c
 
 aceex.io, 1926, RESELLER, b1cf3c874d5c6682
